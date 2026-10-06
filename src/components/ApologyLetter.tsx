@@ -449,15 +449,12 @@ export default function ApologyLetter({
 
                 {/* Letter Body: Dark purple/pink handwritten text */}
                 <div
-                  className={`font-handwriting min-h-0 flex-1 basis-0 overflow-y-auto pr-2 text-lg leading-relaxed tracking-wide whitespace-pre-wrap break-words overscroll-contain sm:pr-3 sm:text-xl [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-[var(--letter-scrollbar-track)] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border-2 [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-[#fff9ec] [&::-webkit-scrollbar-thumb]:bg-[var(--letter-scrollbar-thumb)] [&::-webkit-scrollbar-thumb:hover]:bg-[var(--letter-scrollbar-thumb-hover)] ${
+                  className={`font-handwriting flex-1 min-h-[160px] max-h-[55vh] sm:max-h-[60vh] overflow-y-auto pr-2 text-lg leading-relaxed tracking-wide whitespace-pre-wrap break-words overscroll-contain sm:pr-3 sm:text-xl [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-[var(--letter-scrollbar-track)] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border-2 [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-[#fff9ec] [&::-webkit-scrollbar-thumb]:bg-[var(--letter-scrollbar-thumb)] [&::-webkit-scrollbar-thumb:hover]:bg-[var(--letter-scrollbar-thumb-hover)] ${
                     isPink ? "text-[#4a1236]" : "text-[#451036]"
                   }`}
                   style={{
                     scrollbarWidth: "thin",
                     scrollbarGutter: "stable",
-                    scrollbarColor: isPink
-                      ? "rgba(244,114,182,0.72) rgba(251,207,232,0.3)"
-                      : "rgba(192,132,252,0.72) rgba(233,213,255,0.32)",
                     "--letter-scrollbar-track": isPink
                       ? "rgba(251,207,232,0.3)"
                       : "rgba(233,213,255,0.32)",

@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Heart, Sparkles } from "lucide-react";
 import ClientPortal from "@/components/ClientPortal";
 
+import { loveLetter3Content } from "@/data/letters";
+
 interface LoveLetterEnvelopeProps {
   rotation?: number;
   className?: string;
@@ -118,22 +120,13 @@ export default function LoveLetterEnvelope({
 
               {/* Letter Content */}
               <div
-                className="font-handwriting min-h-0 flex-1 basis-0 space-y-4 overflow-y-auto overscroll-contain pr-2 text-lg leading-relaxed break-words text-slate-800 sm:text-xl [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-[rgba(251,207,232,0.3)] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border-2 [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-[#fff8f0] [&::-webkit-scrollbar-thumb]:bg-[rgba(244,114,182,0.72)] [&::-webkit-scrollbar-thumb:hover]:bg-[rgba(225,29,72,0.8)]"
+                className="font-handwriting flex-1 min-h-[160px] max-h-[55vh] sm:max-h-[60vh] overflow-y-auto overscroll-contain pr-2 text-lg leading-relaxed break-words text-[#4a1236] sm:text-xl [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-[rgba(251,207,232,0.3)] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border-2 [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-[#fff8f0] [&::-webkit-scrollbar-thumb]:bg-[rgba(244,114,182,0.72)] [&::-webkit-scrollbar-thumb:hover]:bg-[rgba(225,29,72,0.8)]"
                 style={{
                   scrollbarWidth: "thin",
                   scrollbarGutter: "stable",
-                  scrollbarColor: "rgba(244,114,182,0.72) rgba(251,207,232,0.3)",
                 }}
               >
-                <p>
-                  I know I might be a little late for Boyfriend’s Day, but honestly, having you in my life is something I celebrate every single second.
-                </p>
-                <p>
-                  Thank you for your infinite patience, the stupid jokes that never fail to make me laugh, the warm hugs that fix everything, and for simply being you.
-                </p>
-                <p>
-                  Here is to every sunset we have watched, every playlist we have shared, and a million more adventures waiting for us.
-                </p>
+                {loveLetter3Content}
               </div>
 
               {/* Signature */}

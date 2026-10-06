@@ -13,166 +13,10 @@ import RomanticLyricsSection from "@/components/RomanticLyricsSection";
 import ApologyLetter from "@/components/ApologyLetter";
 import InteractiveModal from "@/components/InteractiveModal";
 import ForgivenessSection from "@/components/ForgivenessSection";
+import { apologyLetter1Content, apologyLetter2Content } from "@/data/letters";
 import { ChevronDown, Heart, Sparkles } from "lucide-react";
 
-// =========================================================================
-// 💌 APOLOGY LETTERS CONTENT (EDITABLE)
-// Type your apology letters here. They will appear inside the open letters.
-// =========================================================================
 
-// ✏️ EDIT APOLOGY LETTER 1 HERE
-const apologyLetter1 = (
-  <div className="space-y-3.5 sm:space-y-4">
-    <p>Sorry yrr... 🥺❤️</p>
-
-    <p>
-      Tune meri wajah se dance chhod diya... and honestly, I feel so guilty. You don&apos;t even know how much. 💔
-    </p>
-
-    <div className="flex items-center gap-1.5 py-0.5 text-xs opacity-40 text-rose-400">
-      <span>♡</span>
-      <span>✧</span>
-      <span>♡</span>
-    </div>
-
-    <p>
-      Meri wajah se you left something that you absolutely loved, something that made you happy... and that thought genuinely hurts me. I wish I could go back in time and correct my mistake. I really, really do. 🥺
-    </p>
-
-    <p>
-      Ek baar galti ho gayi...{" "}
-      <span className="bg-pink-200/60 text-rose-900 px-2 py-0.5 rounded-md font-bold shadow-[0_1px_2px_rgba(244,63,94,0.12)] inline-block">
-        please maaf kar de
-      </span>
-      . ❤️🩹
-    </p>
-
-    <p>
-      And honestly, I would really love it if you would dance again. Please. 🥺🫶🏻
-      <br />
-      I don&apos;t want my mistake to be the reason you stay away from something you loved so much.
-    </p>
-
-    <div className="flex items-center gap-1.5 py-0.5 text-xs opacity-40 text-rose-400">
-      <span>✦</span>
-      <span>♡</span>
-      <span>✦</span>
-    </div>
-
-    <p>
-      I know it was disrespectful.
-      <br />
-      <span className="bg-pink-200/60 text-rose-900 px-2 py-0.5 rounded-md font-bold shadow-[0_1px_2px_rgba(244,63,94,0.12)] inline-block">
-        I know I was wrong
-      </span>
-      .
-      <br />
-      And I&apos;m genuinely, genuinely sorry. 😔
-    </p>
-
-    <p>Bas... please forgive me. ❤️</p>
-
-    <p>
-      I can&apos;t undo what happened, but I hope I can make it right somehow.
-    </p>
-
-    <p>
-      And if you ever feel like dancing again...
-      <br />
-      please dance. 💃🏻❤️
-      <br />
-      Not because of me, but because YOU love it.
-    </p>
-
-    <div className="flex items-center gap-1.5 py-0.5 text-xs opacity-40 text-rose-400">
-      <span>♡</span>
-      <span>✧</span>
-      <span>♡</span>
-    </div>
-
-    <p>I&apos;m so sorry, Chotu. 🥺❤️🩹</p>
-  </div>
-);
-
-// ✏️ EDIT APOLOGY LETTER 2 HERE
-const apologyLetter2 = (
-  <div className="space-y-2.5 sm:space-y-3 text-[15px] sm:text-[16px] leading-[1.45] sm:leading-[1.5] tracking-normal">
-    <p>Chotu... I&apos;m really sorry. 🥺❤️</p>
-
-    <p>
-      Maine B Block ke saamne volume tez karke tumhe embarrass kiya aur tumhare saath disrespect
-      kiya... and{" "}
-      <span className="bg-pink-200/70 text-[#5b1238] px-1.5 py-0.5 rounded-md font-bold shadow-[0_1px_3px_rgba(244,63,94,0.16)]">
-        I know that was wrong
-      </span>
-      . 💔
-    </p>
-
-    <p>
-      I know tumhe kitna bura laga hoga, especially because it happened in front of other people.
-      Mujhe pata hai tumhe kitna sharminda feel hua hoga because of me, and honestly... that
-      thought makes me feel terrible. 🥺
-    </p>
-
-    <div className="flex items-center gap-1.5 py-0.5 text-[10px] opacity-45 text-pink-500">
-      <span>♡</span>
-      <span>✧</span>
-      <span>♡</span>
-    </div>
-
-    <p>
-      Maine tumhe drag kiya, volume tez kiya aur jis tarah se maine behave kiya... I know it
-      wasn&apos;t okay. 😔
-    </p>
-
-    <p>
-      It wasn&apos;t intentional, I swear, but I know that doesn&apos;t make what happened any less
-      hurtful.
-    </p>
-
-    <p>
-      Mujhe pata hai tum disrespect bilkul pasand nahi karte... and I still ended up making you
-      feel disrespected. I&apos;m genuinely sorry for that. ❤️‍🩹
-    </p>
-
-    <div className="flex items-center gap-1.5 py-0.5 text-[10px] opacity-45 text-rose-500">
-      <span>✦</span>
-      <span>♡</span>
-      <span>✦</span>
-    </div>
-
-    <p>I wish I could take that moment back.</p>
-
-    <p>But I can&apos;t.</p>
-
-    <p>
-      All I can do is promise you that{" "}
-      <span className="bg-pink-200/70 text-[#5b1238] px-1.5 py-0.5 rounded-md font-bold shadow-[0_1px_3px_rgba(244,63,94,0.16)]">
-        it won&apos;t happen again
-      </span>
-      . 🥺🫶🏻
-    </p>
-
-    <p>
-      I will be more careful with you, with your feelings, and with the things that matter to you.
-    </p>
-
-    <p>I&apos;m really, really sorry, Chotu. ❤️</p>
-
-    <div className="flex items-center gap-1.5 py-0.5 text-[10px] opacity-45 text-pink-500">
-      <span>♡</span>
-      <span>✧</span>
-      <span>♡</span>
-    </div>
-
-    <p>
-      <span className="bg-pink-200/70 text-[#5b1238] px-1.5 py-0.5 rounded-md font-bold shadow-[0_1px_3px_rgba(244,63,94,0.16)]">
-        Please forgive me
-      </span>
-      . 🥺❤️‍🩹
-    </p>
-  </div>
-);
 
 export default function LoveArchivePage() {
   const [modalType, setModalType] = useState<string | null>(null);
@@ -312,7 +156,7 @@ export default function LoveArchivePage() {
             <div className="flex justify-center items-center order-1">
               <ApologyLetter
                 envelopeTitle="for my chotu ♡"
-                letterContent={apologyLetter1}
+                letterContent={apologyLetter1Content}
                 variant="pink"
                 rotation={-3}
               />
@@ -335,7 +179,7 @@ export default function LoveArchivePage() {
             <div className="flex justify-center items-center order-3">
               <ApologyLetter
                 envelopeTitle="one more thing... 💌"
-                letterContent={apologyLetter2}
+                letterContent={apologyLetter2Content}
                 variant="purple"
                 rotation={3}
               />
