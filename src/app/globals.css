@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-handwriting: var(--font-handwriting), "Caveat", cursive;
+    --font-bubble: var(--font-bubble), "Fredoka", cursive, sans-serif;
+  }
+}
+
+body {
+  background-color: #080019;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Custom font helper classes */
+.font-handwriting {
+  font-family: var(--font-handwriting), "Caveat", cursive;
+}
+
+.font-bubble {
+  font-family: var(--font-bubble), "Fredoka", cursive, sans-serif;
+}
+
+/* 3D Central Typography Effects */
+.title-happy {
+  font-family: var(--font-bubble), sans-serif;
+  color: #ffffff;
+  text-shadow: 
+    0 1px 0 #eeddff,
+    0 2px 0 #d8b4fe,
+    0 3px 0 #a855f7,
+    0 4px 0 #7e22ce,
+    0 5px 0 #581c87,
+    0 8px 15px rgba(0, 0, 0, 0.7),
+    0 0 25px rgba(192, 132, 252, 0.8),
+    0 0 50px rgba(168, 85, 247, 0.4);
+}
+
+.title-boyfriends {
+  font-family: var(--font-bubble), sans-serif;
+  background: linear-gradient(180deg, #FFE885 0%, #FF9E2C 25%, #FF2E79 60%, #B829FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 0 #93003A) drop-shadow(0 7px 0 #4C0020) drop-shadow(0 10px 20px rgba(0,0,0,0.8)) drop-shadow(0 0 35px rgba(255, 46, 121, 0.75));
+}
+
+.title-day {
+  font-family: var(--font-bubble), sans-serif;
+  background: linear-gradient(180deg, #ffffff 0%, #FF60B2 35%, #E11D74 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 0 #9F074A) drop-shadow(0 6px 0 #590029) drop-shadow(0 8px 15px rgba(0,0,0,0.8)) drop-shadow(0 0 30px rgba(255, 96, 178, 0.8));
+}
+
+/* Neon Glow Filters */
+.neon-pink-glow {
+  filter: drop-shadow(0 0 6px #ff2d75) drop-shadow(0 0 15px rgba(255, 45, 117, 0.6));
+}
+
+.neon-white-glow {
+  filter: drop-shadow(0 0 4px #ffffff) drop-shadow(0 0 12px rgba(255, 255, 255, 0.7));
+}
+
+.neon-purple-glow {
+  filter: drop-shadow(0 0 8px #a855f7) drop-shadow(0 0 20px rgba(168, 85, 247, 0.6));
+}
+
+/* Glassmorphism styling */
+.cosmic-glass {
+  background: linear-gradient(135deg, rgba(28, 11, 53, 0.75) 0%, rgba(18, 0, 37, 0.85) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(236, 72, 153, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.cosmic-glass-pill {
+  background: linear-gradient(180deg, rgba(35, 15, 66, 0.85) 0%, rgba(18, 5, 38, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(216, 180, 254, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+/* Realistic Paper Scrapbook Edge Styles */
+.torn-paper {
+  background: #fff5eb;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.3);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+
+.torn-paper-pink {
+  background: #fdf2f4;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Polaroid Paper Style */
+.polaroid-card {
+  background: #ffffff;
+  padding: 12px 12px 28px 12px;
+  box-shadow: 
+    0 15px 35px -5px rgba(0, 0, 0, 0.65),
+    0 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0 0 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.polaroid-card:hover {
+  box-shadow: 
+    0 25px 45px -5px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(244, 63, 94, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080019;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a855f7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ec4899;
+}
+
+/* Star Twinkle Keyframe */
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.animate-twinkle {
+  animation: star-twinkle 3s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1.5deg); }
+}
+
+.animate-float {
+  animation: float-slow 5s ease-in-out infinite;
+}
